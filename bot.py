@@ -18,11 +18,8 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from dotenv import load_dotenv
 import threading
 
-load_dotenv()
-API_TOKEN = os.getenv("8505905087:AAFNlk5FBJOXMJfxxAlE2xwC5IMMOb7M6DE")
-bot = Bot(token=API_TOKEN)
-storage = MemoryStorage()
-dp = Dispatcher(storage=storage)
+token = '8505905087:AAFNlk5FBJOXMJfxxAlE2xwC5IMMOb7M6DE'
+bot = telebot.TeleBot(token, parse_mode="HTML")
 
 # Auto Proxy System
 PROXIES = []
